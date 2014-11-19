@@ -2,7 +2,7 @@ from __future__ import print_function, division
 from nilmtk import DataSet, TimeFrame
 from time import time
 
-ukdale = DataSet('/data/mine/vadeec/merged/ukdale_blosc_expectedsize.h5')
+ukdale = DataSet('/data/mine/vadeec/merged/ukdale_blosc_expectedrows_full_index_9.h5')
 ukdale.store.window = TimeFrame(start='2014-11-09 06:24:33.500000+01:00', 
                                 end='2014-11-16 06:24:33.500000+00:00')
 elec = ukdale.buildings[1].elec
