@@ -13,7 +13,7 @@ ukdale.store.window = TimeFrame(start=pd.Timestamp('2014-03-20 06:24:33', tz=TZ)
 
 elec = ukdale.buildings[1].elec
 elec.use_alternative_mains()
-elec.clear_cache()
+# elec.clear_cache()
 
 t0 = time()
 proportion = elec.proportion_of_energy_submetered()
