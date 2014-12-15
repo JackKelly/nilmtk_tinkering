@@ -10,3 +10,5 @@ ukdale.set_window("2014-01-01", "2014-01-02")
 
 elec = ukdale.buildings[1].elec
 elec.use_alternative_mains()
+
+print elec.load(chunksize=10).next()
