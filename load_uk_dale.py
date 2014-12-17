@@ -11,4 +11,8 @@ ukdale.set_window("2014-01-01", "2014-01-02")
 elec = ukdale.buildings[1].elec
 elec.use_alternative_mains()
 
-print elec.load(chunksize=10).next()
+# gen = elec.load(verbose=True) 
+# df = gen.next()
+# corr = elec.correlation_of_sum_of_submeters_with_mains(verbose=True)
+
+prop = elec.proportion_of_energy_submetered()
