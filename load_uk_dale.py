@@ -8,7 +8,7 @@ ukdale = DataSet('/data/mine/vadeec/merged/ukdale.h5')
 # ukdale.store.window = TimeFrame(pd.Timestamp("2014-01-01 00:00", tz=TZ),
 #                                 pd.Timestamp("2014-01-02 00:00", tz=TZ))
 
-ukdale.set_window("2014-01-01", "2014-02-01")
+ukdale.set_window("2013-04-01", "2013-05-01")
 
 elec = ukdale.buildings[1].elec
 elec2 = ukdale.buildings[2].elec
@@ -29,3 +29,9 @@ submeters2 = elec2.submeters()
 # top_k = grouped.select_top_k(group_remainder=True)
 
 # top_k.plot(kind='area')
+# lights = elec.meters_directly_downstream_of_mains().select_using_appliances(type='light')
+# lights.sort_meters()
+
+# ukdale.clear_cache()
+# ukdale.plot_good_sections()
+ukdale.plot_histograms_of_mains_power()
