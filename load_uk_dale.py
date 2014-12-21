@@ -11,10 +11,15 @@ ukdale = DataSet('/data/mine/vadeec/merged/ukdale.h5')
 ukdale.set_window("2013-04-01", "2013-05-01")
 
 elec = ukdale.buildings[1].elec
-elec2 = ukdale.buildings[2].elec
-elec.use_alternative_mains()
-elec2.use_alternative_mains()
-submeters2 = elec2.submeters()
+meter = elec[2]
+# ukdale.plot_good_sections()
+
+# best = meter._convert_physical_quantity_and_ac_type_to_cols(ac_type='best')
+# elec2 = ukdale.buildings[2].elec
+# elec.use_alternative_mains()
+# elec2.use_alternative_mains()
+# submeters2 = elec2.submeters()
+
 # gen = submeters2.load()
 # df = next(gen)
 
@@ -34,4 +39,4 @@ submeters2 = elec2.submeters()
 
 # ukdale.clear_cache()
 # ukdale.plot_good_sections()
-ukdale.plot_histograms_of_mains_power()
+# ukdale.plot_histograms_of_mains_power()
