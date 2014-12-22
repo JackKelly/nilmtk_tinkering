@@ -1,18 +1,5 @@
 from __future__ import print_function, division
 from nilmtk import DataSet, TimeFrame, MeterGroup
-from nilmtk.utils import capitalise_index, capitalise_legend
-import pandas as pd
-
-# Plotting
-def _mm_to_inches(*mms):
-    return [mm / 25.4 for mm in mms]
-
-%matplotlib qt 
-import matplotlib.pyplot as plt
-import seaborn as sns
-sns.set(style="white")
-from pylab import rcParams
-rcParams['figure.figsize'] = _mm_to_inches(180, 100) # 180 or 88mm wide for Scientific Data
 
 dataset = DataSet('/data/mine/vadeec/merged/ukdale.h5')
 TZ = dataset.metadata['timezone']
